@@ -121,24 +121,6 @@ exports.deleteDesignById = async (req, res) => {
     }
 }
 
-// exports.searchDesign = async(req, res) => {
-//     const { tags, title, description } = req.body;
-
-//   const searchQuery = {
-//     $or: [
-//       { tags: { $regex: tags, $options: 'i' } },
-//       { title: { $regex: title, $options: 'i' } },
-//       { description: { $regex: description, $options: 'i' } },
-//     ],
-//   };
-
-//   const design = await DesignSchema.find(searchQuery)
-//   console.log(design)
-    
-
-//     return res.json(design);
-  
-// }
 
 exports.searchDesign = async (req, res) => {
   const { tags, title, description } = req.body;
