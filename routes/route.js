@@ -27,9 +27,9 @@ Router.put(
         next,
         process.env.AWS_S3_IMAGE_BUCKET_NAME,
         process.env.AWS_S3_DOCUMENT_PUBLIC_ACCESS,
-        true
+        false
       ),
-    uploadFilesMiddleWare().array("images", 16),
+    uploadFilesMiddleWare().single("file"),
     (req, res) => UploadImages(req, res)
   );
 

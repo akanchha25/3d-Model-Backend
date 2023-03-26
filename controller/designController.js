@@ -167,8 +167,8 @@ exports.searchDesign = async (req, res) => {
 
 exports.UploadImages = async (req, res) => {
     try {
-      if (!req.files) {
-        console.log(req.files);
+      if (!req.file) {
+        console.log(req.file);
         return res.status(500).json("inSufficient data");
       }
   
